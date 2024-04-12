@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: "Check out latest code"
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Run the Super Linter action ⛔️
         uses: super-linter/super-linter@v6.3.1
