@@ -1,8 +1,11 @@
+---
 name: Lint
 
 on:
   push:
     branches: [ main ]
+
+permissions: read-all
 
 jobs:
   check:
@@ -24,4 +27,3 @@ jobs:
         uses: super-linter/super-linter@v6.3.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FILTER_REGEX_EXCLUDE: .*.github/.*
