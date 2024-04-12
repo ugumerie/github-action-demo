@@ -3,7 +3,7 @@ name: Lint
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 permissions: read-all
 
