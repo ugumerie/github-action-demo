@@ -1,0 +1,21 @@
+name: Lint
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  check:
+    name: Check code for lint errors 🔥
+    runs-on: ubuntu-lastest
+
+    steps:
+      - name: "Check out latest code"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run the Super Linter action ⛔️
+        uses: super-linter/super-linter@v6.3.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
